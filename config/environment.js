@@ -23,6 +23,17 @@ module.exports = function (environment) {
     },
   };
 
+  ENV['@sentry/ember'] = {
+    sentry: {
+      dsn: '',
+      disablePerformance: true,
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production,
+      tracesSampleRate: 0,
+    },
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
